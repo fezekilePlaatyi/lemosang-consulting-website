@@ -3,91 +3,9 @@ import { ExternalLink, Calendar, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import AllProjects from "@/data/projects.json"; // Assuming you have a projects data file
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Smart Electrical Meter Installation",
-      description: "Auditing and Installation of 32,000 smart electrical meters in Gauteng under Eskom CORP3310 program.",
-      category: "Smart Metering",
-      location: "Gauteng, South Africa",
-      year: "2024",
-      tags: ["Smart Meters", "Eskom", "CORP3310"],
-      image: "/lovable-uploads/dc17be6b-27a6-4501-9edb-8384e3390974.png"
-    },
-    {
-      title: "Underground Cable Installation",
-      description: "Laying of 132kVA underground electrical cable from Eskom Dalkeith substation to City Power Lutz substation in Roodepoort.",
-      category: "Infrastructure",
-      location: "Roodepoort",
-      year: "2023",
-      tags: ["Underground Cable", "Power Distribution", "132kVA"],
-      image: "/lovable-uploads/ddad0d86-3cd6-42d8-bd68-46d55f039dc8.png"
-    },
-    {
-      title: "Power Plant Maintenance Services",
-      description: "Maintenance of Turbines and Auxiliary Services at Eskom Power Stations: Matimba, Lethabo, Arnot, Matla, Tutuka, Camden, and Majuba.",
-      category: "Power Generation",
-      location: "Multiple Eskom Stations",
-      year: "2024",
-      tags: ["Turbine Maintenance", "Power Plants", "Auxiliary Services"],
-      image: "/lovable-uploads/8ddde660-2f14-4465-afdc-3c9f104a7afe.png"
-    },
-    {
-      title: "Smart City Solution Implementation",
-      description: "Comprehensive Smart City Solution for Rustenburg Local Municipality for improved service delivery and efficiency.",
-      category: "Smart City",
-      location: "Rustenburg Local Municipality",
-      year: "2023",
-      tags: ["Smart City", "Municipality", "Service Delivery"],
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=300&fit=crop&auto=format"
-    },
-    {
-      title: "Energy Efficiency Programme",
-      description: "Implementation of Energy Efficiency Programme by the Department of Infrastructure Development – Gauteng Provincial Government.",
-      category: "Energy Efficiency",
-      location: "Gauteng Province",
-      year: "2024",
-      tags: ["Energy Efficiency", "Government", "Infrastructure"],
-      image: "/lovable-uploads/a3edcab4-327c-4c3f-aa18-164da4a6d2d4.png"
-    },
-    {
-      title: "Solar Water Equipment Installation",
-      description: "Supply and Installation of Solar Water Equipment in various provinces through GIZ-SAGEN partnership.",
-      category: "Renewable Energy",
-      location: "Multiple Provinces",
-      year: "2023",
-      tags: ["Solar Energy", "GIZ-SAGEN", "Water Heating"],
-      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=600&h=300&fit=crop&auto=format"
-    },
-    {
-      title: "Revenue Management for Municipalities",
-      description: "Revenue Management and Enhancement for municipalities owing Eskom through National Treasury RT29 Program.",
-      category: "Revenue Management",
-      location: "Multiple Municipalities",
-      year: "2024",
-      tags: ["Revenue Management", "National Treasury", "RT29"],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop&auto=format"
-    },
-    {
-      title: "Technical Audits of Energy Devices",
-      description: "Technical and Physical Audits of installed energy-saving devices in KZN province by Eskom.",
-      category: "Energy Audits",
-      location: "KZN Province",
-      year: "2023",
-      tags: ["Technical Audits", "Energy Saving", "KZN"],
-      image: "https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=600&h=300&fit=crop&auto=format"
-    },
-    {
-      title: "Vodacom Base Station Monitoring",
-      description: "Installation of Raptors at Vodacom Base Stations to monitor performance and security of the base station.",
-      category: "Telecommunications",
-      location: "Various Locations",
-      year: "2023",
-      tags: ["Base Stations", "Monitoring", "Security"],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=300&fit=crop&auto=format"
-    }
-  ];
 
   return (
     <section id="projects" className="py-20 bg-slate-50">
@@ -100,7 +18,7 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {AllProjects.slice(0,6).map((project, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-md">
               <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden">
                 <img 
@@ -154,7 +72,7 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="hover:bg-teal-600 hover:text-white">
+          <Button size="lg" variant="outline" className="hover:bg-teal-600 hover:text-white" onClick={() => window.location.href = "/projects"}>
             View All Projects
           </Button>
         </div>

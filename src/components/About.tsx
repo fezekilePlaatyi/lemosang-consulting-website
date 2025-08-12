@@ -3,10 +3,9 @@ import { Users, Award, Target, Clock } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: <Users className="h-8 w-8" />, number: "50+", label: "Expert Engineers" },
+    { icon: <Users className="h-8 w-8" />, number: "20+", label: "Expert Engineers" },
     { icon: <Award className="h-8 w-8" />, number: "15+", label: "Years Experience" },
-    { icon: <Target className="h-8 w-8" />, number: "500+", label: "Projects Delivered" },
-    { icon: <Clock className="h-8 w-8" />, number: "24/7", label: "Support Available" }
+    { icon: <Target className="h-8 w-8" />, number: "50+", label: "Projects Delivered" }
   ];
 
   return (
@@ -18,7 +17,7 @@ const About = () => {
               Leading the Future of Engineering
             </h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              For over 15 years, Lemosang Consulting has been at the forefront of electrical and mechanical 
+              For over 15 years, Lemosang <i>"enlighten the others about us"</i> Consulting has been at the forefront of electrical and mechanical 
               engineering consulting. Our team of expert engineers combines innovative thinking with 
               proven methodologies to deliver exceptional results.
             </p>
@@ -71,6 +70,15 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Quality Assurance</h4>
                     <p className="text-blue-100 text-sm">Rigorous testing and compliance with all industry standards</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Member of ECA (Electrical Contractors Association SA)</h4>
+                    <p className="text-blue-100 text-sm">
+                      Proudly affiliated with the ECA, ensuring the highest standards in electrical contracting
+                    </p>
                   </div>
                 </li>
               </ul>

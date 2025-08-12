@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -14,17 +16,22 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleNavigateContact = () => {
+    navigate("#contact");
+    window.scrollTo({ top: document.getElementById("contact")?.offsetTop, behavior: "smooth" });
+    setIsOpen(false);
+  }
+
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav className="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex items-center">
+        <div className="flex justify-between items-center">
+          <div className="flex-shrink-0 flex items-center p-2">
             <img 
               src="/lovable-uploads/2a7346b1-88b1-4ff0-bd35-14cf4f44e86e.png" 
               alt="Lemosang Consulting" 
-              className="h-10 w-auto mr-3"
+              className="h-20 w-auto mr-3"
             />
-            <h1 className="text-xl font-bold text-slate-800">Lemosang Consulting</h1>
           </div>
           
           {/* Desktop Navigation */}
@@ -70,7 +77,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-2 bg-teal-600 hover:bg-teal-700">
+              <Button className="w-full mt-2 bg-teal-600 hover:bg-teal-700" onClick={handleNavigateContact}>
                 Get Quote
               </Button>
             </div>

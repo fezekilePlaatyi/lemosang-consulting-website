@@ -5,15 +5,11 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center mb-4">
               <h3 className="text-2xl font-bold">Lemosang Consulting</h3>
-              <div className="flex ml-3 space-x-2">
-                <Zap className="h-6 w-6 text-blue-400" />
-                <Cog className="h-6 w-6 text-slate-400" />
-              </div>
             </div>
             <p className="text-slate-300 mb-6 max-w-md leading-relaxed">
               Leading electrical and mechanical engineering consultancy, delivering innovative 
@@ -30,6 +26,16 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-blue-400">Certificates</h4>
+            <ul className="space-y-2 text-slate-300">
+              <li>ISO</li>
+              <li>BBEEE</li>
+              <li>COIDA</li>
+              <li>CSD</li>
+            </ul>
           </div>
 
           {/* Services */}
@@ -58,7 +64,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-blue-400" />
-                <span>info@lemosangconsulting.co.za</span>
+                <div>
+                  <span>info@lemosangconsulting.co.za</span>
+                </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 text-blue-400 mt-1" />

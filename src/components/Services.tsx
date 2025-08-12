@@ -1,16 +1,9 @@
 
-import { Zap, Cog, Droplets, Building, Factory, Shield, TreePine, Users } from "lucide-react";
+import { Zap, Cog, Droplets, Building, Factory, Shield, TreePine, Building2, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
-    {
-      icon: <Zap className="h-8 w-8 text-teal-600" />,
-      title: "Smart Water & Electricity Metering",
-      description: "Advanced metering infrastructure for efficient utility management and monitoring.",
-      features: ["Smart Meter Installation", "Revenue Management", "Energy Efficiency", "Real-time Monitoring"],
-      image: "/lovable-uploads/dc17be6b-27a6-4501-9edb-8384e3390974.png"
-    },
     {
       icon: <Cog className="h-8 w-8 text-blue-600" />,
       title: "Power Plant Maintenance",
@@ -19,15 +12,22 @@ const Services = () => {
       image: "/lovable-uploads/8ddde660-2f14-4465-afdc-3c9f104a7afe.png"
     },
     {
-      icon: <Droplets className="h-8 w-8 text-cyan-600" />,
+      icon: <Zap className="h-8 w-8 text-teal-600" />,
       title: "Revenue Management & Enhancement",
-      description: "Revenue management solutions for municipalities and utility providers.",
+      description: "Advanced metering infrastructure for efficient utility management and monitoring.",
+      features: ["Smart Meter Installation", "Revenue Management", "Energy Efficiency", "Real-time Monitoring"],
+      image: "/lovable-uploads/meter_installation.jpg"
+    },
+    {
+      icon: <Building2 className="h-8 w-8 text-cyan-600" />,
+      title: "Municipal Energy Consulting",
+      description: "Comprehensive consulting services for municipalities to optimize energy usage and improve service delivery.",
       features: ["Municipal Solutions", "National Treasury Programs", "Revenue Optimization", "Utility Management"],
-      image: "/lovable-uploads/a3edcab4-327c-4c3f-aa18-164da4a6d2d4.png"
+      image: "/lovable-uploads/how-to-start-a-consulting-company.jpg"
     },
     {
       icon: <Building className="h-8 w-8 text-green-600" />,
-      title: "Construction Management",
+      title: "Construction Management and Services",
       description: "Complete construction management services for residential and commercial projects.",
       features: ["Project Management", "Residential Construction", "Quality Control", "Timeline Management"],
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop&auto=format"
@@ -41,9 +41,9 @@ const Services = () => {
     },
     {
       icon: <Shield className="h-8 w-8 text-purple-600" />,
-      title: "Engineering Services & Consulting",
+      title: "Business Development & Consultations",
       description: "Technical consulting and auditing services for energy systems and infrastructure projects.",
-      features: ["Technical Audits", "Compliance Consulting", "System Design", "Performance Analysis"],
+      features: ["Technical Audits", "Compliance Consulting", "System Design", "Performance Analysis", "BBBEE Partnership"],
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&auto=format"
     },
     {

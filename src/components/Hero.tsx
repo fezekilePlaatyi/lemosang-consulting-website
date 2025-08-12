@@ -1,8 +1,15 @@
 
 import { ArrowRight, Zap, Cog } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("#contact");
+    window.scrollTo({ top: document.getElementById("contact")?.offsetTop, behavior: "smooth" });
+  }
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -23,37 +30,22 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="flex justify-center items-center mb-6 space-x-4">
-          <div className="p-3 bg-teal-600/20 rounded-full">
-            <Zap className="h-8 w-8 text-teal-400" />
-          </div>
-          <div className="p-3 bg-slate-600/20 rounded-full">
-            <Cog className="h-8 w-8 text-slate-400" />
-          </div>
-        </div>
+        <div className="flex justify-center items-center mb-6 space-x-4"></div>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-          <span className="text-teal-400">Water</span> & <span className="text-blue-400">Energy Efficiency</span>
+          <span className="text-teal-400">Energy</span> & <span className="text-blue-400">Water Efficiency</span>
           <br />
           Engineering Solutions
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Helping our clients achieve their water and energy efficiency targets through 
-          innovative engineering solutions and strategic partnerships.
+          Helping our clients achieve their energy and water efficiency targets through innovative engineering solutions and strategic partnerships.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-lg px-8 py-4 group">
+          <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-lg px-8 py-4 group" onClick={handleNavigate}>
             Start Your Project
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="text-white border-white hover:bg-white hover:text-slate-900 text-lg px-8 py-4"
-          >
-            View Our Experience
           </Button>
         </div>
 

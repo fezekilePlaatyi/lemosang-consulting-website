@@ -79,7 +79,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="pt-0">
                   <p className="text-slate-600">CIDB (212256)</p>
-                  <p className="text-slate-600">7EP & 7EB</p>
+                  <p className="text-slate-600">8EP & 8EB</p>
                   <p className="text-sm text-slate-500">Certified & Registered</p>
                 </CardContent>
               </Card>
