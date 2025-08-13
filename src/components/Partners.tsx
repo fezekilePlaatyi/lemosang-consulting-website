@@ -1,26 +1,26 @@
 const Partners = () => {
   const partners = [
-    { name: "Landis+Gyr", link: "https://www.landisgyr.com" },
-    { name: "WSP Facility Management", link: "https://www.wsp.com" },
-    { name: "Kepco KPS (Korean)", link: "https://www.kps.co.kr/eng/index.do" },
-    { name: "African Cables (Cbi)", link: "https://www.africancables.com/" },
-    { name: "Yaetsho Investments", link: "https://www.yaetsho.com/" },
-    { name: "Afrirent Holdings", link: "https://www.afrirentholdings.co.za/" },
-    { name: "TSN Engineering", link: "https://example.com/tsn" },
-    { name: "Tshwane University of Technology", link: "https://www.tut.ac.za" },
-    { name: "Brymac", link: "https://brymac.co.za/" },
-    { name: "Rumas", link: "https://rumas.co.za/" },
-    { name: "GIZ – South African German Energy Programme", link: "https://www.giz.de" },
-    { name: "Vintec (Israel)", link: "https://www.vintec.com/" },
-    { name: "Amanzi Meters", link: "https://www.asantemaji.com/" },
-    { name: "City Power", link: "https://www.citypower.co.za" },
-    { name: "Izando Construction", link: "https://www.izandoconstruction.co.za/" },
-    { name: "ChromeCo", link: "https://www.chromeco.sa/" },
-    { name: "Eskom", link: "https://www.eskom.co.za" },
-    { name: "Financial Intelligence Centre", link: "https://www.fic.gov.za" },
-    { name: "Techsitter", link: "https://techsitter.io/" },
-    { name: "Byrnes Associates", link: "https://www.byrnesandassociatesinc.com/" },
-    { name: "Soosan Industries", link: "http://eng.soosanind.co.kr/main/index.html" },
+    { name: "Landis+Gyr", link: "https://www.landisgyr.com", logo: "/lovable-uploads/logos/Picture1.png" },
+    { name: "WSP Facility Management", link: "https://www.wsp.com", logo: "/lovable-uploads/logos/Picture2.png" },
+    { name: "Kepco KPS (Korean)", link: "https://www.kps.co.kr/eng/index.do", logo: "/lovable-uploads/logos/Picture3.png" },
+    { name: "African Cables (Cbi)", link: "https://www.africancables.com/", logo: "/lovable-uploads/logos/Picture4.png" },
+    { name: "Yaetsho Investments", link: "https://www.yaetsho.com/", logo: "/lovable-uploads/logos/Picture5.png" },
+    { name: "Afrirent Holdings", link: "https://www.afrirentholdings.co.za/", logo: "/lovable-uploads/logos/Picture6.png" },
+    // { name: "TSN Engineering", link: "https://example.com/tsn" },
+    { name: "Tshwane University of Technology", link: "https://www.tut.ac.za", logo: "/lovable-uploads/logos/Picture7.png" },
+    { name: "Brymac", link: "https://brymac.co.za/", logo: "/lovable-uploads/logos/Picture8.png" },
+    { name: "Rumas", link: "https://rumas.co.za/", logo: "/lovable-uploads/logos/Picture9.png" },
+    { name: "GIZ – South African German Energy Programme", link: "https://www.giz.de", logo: "/lovable-uploads/logos/Picture10.png" },
+    { name: "Vintec (Israel)", link: "https://www.vintec.com/", logo: "/lovable-uploads/logos/Picture11.png" },
+    { name: "Amanzi Meters", link: "https://www.asantemaji.com/", logo: "/lovable-uploads/logos/Picture12.png" },
+    { name: "City Power", link: "https://www.citypower.co.za", logo: "/lovable-uploads/logos/Picture13.png" },
+    { name: "Izando Construction", link: "https://www.izandoconstruction.co.za/", logo: "/lovable-uploads/logos/Picture14.png" },
+    { name: "ChromeCo", link: "https://www.chromeco.sa/", logo: "/lovable-uploads/logos/Picture18.jpg" },
+    { name: "Eskom", link: "https://www.eskom.co.za", logo: "/lovable-uploads/logos/Picture15.png" },
+    { name: "Financial Intelligence Centre", link: "https://www.fic.gov.za", logo: "/lovable-uploads/logos/Picture16.png" },
+    { name: "Techsitter", link: "https://techsitter.io/", logo: "/lovable-uploads/logos/Picture17.png" },
+    // { name: "Byrnes Associates", link: "https://www.byrnesandassociatesinc.com/" },
+    { name: "Soosan Industries", link: "http://eng.soosanind.co.kr/main/index.html", logo: "/lovable-uploads/logos/Picture19.png" },
   ];
 
   return (
@@ -42,11 +42,14 @@ const Partners = () => {
               href={partner.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-slate-50 p-6 rounded-lg text-center hover:shadow-md transition-shadow duration-300 border border-slate-200 block"
+              title={partner.name}
+              className="bg-slate-50 p-6 rounded-lg flex justify-center items-center h-32 hover:shadow-md transition-shadow duration-300 border border-slate-200"
             >
-              <h3 className="text-sm font-semibold text-slate-700 leading-tight">
-                {partner.name}
-              </h3>
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-16 object-contain"
+              />
             </a>
           ))}
         </div>
