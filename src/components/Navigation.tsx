@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,22 +17,25 @@ const Navigation = () => {
 
   const handleNavigateContact = () => {
     navigate("#contact");
-    window.scrollTo({ top: document.getElementById("contact")?.offsetTop, behavior: "smooth" });
+    window.scrollTo({
+      top: document.getElementById("contact")?.offsetTop,
+      behavior: "smooth",
+    });
     setIsOpen(false);
-  }
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center p-2">
-            <img 
-              src="/lovable-uploads/2a7346b1-88b1-4ff0-bd35-14cf4f44e86e.png" 
-              alt="Lemosang Consulting" 
+            <img
+              src="/lovable-uploads/2a7346b1-88b1-4ff0-bd35-14cf4f44e86e.png"
+              alt="Lemosang Consulting"
               className="h-20 w-auto mr-3"
             />
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -46,9 +48,6 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="ml-4 bg-teal-600 hover:bg-teal-700">
-                Get Quote
-              </Button>
             </div>
           </div>
 
@@ -58,7 +57,11 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 hover:text-teal-600"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -77,9 +80,6 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-2 bg-teal-600 hover:bg-teal-700" onClick={handleNavigateContact}>
-                Get Quote
-              </Button>
             </div>
           </div>
         )}
