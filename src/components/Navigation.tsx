@@ -8,11 +8,11 @@ const Navigation = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const handleNavigateContact = () => {
@@ -30,7 +30,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center p-2">
             <img
-              src="/lovable-uploads/2a7346b1-88b1-4ff0-bd35-14cf4f44e86e.png"
+              src="/lemosang-uploads/new_logo.png"
               alt="Lemosang Consulting"
               className="h-20 w-auto mr-3"
             />

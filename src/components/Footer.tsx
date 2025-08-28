@@ -59,13 +59,12 @@ const Footer = () => {
                 <Phone className="h-4 w-4 mr-2 text-blue-400" />
                 <div>
                   <p>011 568 6201</p>
-                  <p>063 786 0069</p>
                 </div>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-blue-400" />
                 <div>
-                  <span>info@lemosangconsulting.co.za</span>
+                  <span>info@lemosang.com</span>
                 </div>
               </div>
               <div className="flex items-start">

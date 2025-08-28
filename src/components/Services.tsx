@@ -9,21 +9,21 @@ const Services = () => {
       title: "Power Plant Maintenance",
       description: "Turbine generation services and maintenance for power stations including Matimba, Lethabo, Arnot, Matla, Tutuka, Camden, and Majuba.",
       features: ["Turbine Maintenance", "Auxiliary Services", "Power Station Support", "Equipment Servicing"],
-      image: "/lovable-uploads/8ddde660-2f14-4465-afdc-3c9f104a7afe.png"
+      image: "/lemosang-uploads/8ddde660-2f14-4465-afdc-3c9f104a7afe.png"
     },
     {
       icon: <Zap className="h-8 w-8 text-teal-600" />,
       title: "Revenue Management & Enhancement",
       description: "Advanced metering infrastructure for efficient utility management and monitoring.",
       features: ["Smart Meter Installation", "Revenue Management", "Energy Efficiency", "Real-time Monitoring"],
-      image: "/lovable-uploads/meter_installation.jpg"
+      image: "/lemosang-uploads/meter_installation.jpg"
     },
     {
       icon: <Building2 className="h-8 w-8 text-cyan-600" />,
       title: "Municipal Energy Consulting",
       description: "Comprehensive consulting services for municipalities to optimize energy usage and improve service delivery.",
       features: ["Municipal Solutions", "National Treasury Programs", "Revenue Optimization", "Utility Management"],
-      image: "/lovable-uploads/how-to-start-a-consulting-company.jpg"
+      image: "/lemosang-uploads/how-to-start-a-consulting-company.jpg"
     },
     {
       icon: <Building className="h-8 w-8 text-green-600" />,
