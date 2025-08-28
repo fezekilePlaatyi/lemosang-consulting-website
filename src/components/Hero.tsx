@@ -33,6 +33,8 @@ const Hero = () => {
         <div className="flex justify-center items-center mb-6 space-x-4"></div>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                  <br />
+                          <br />
           <span className="text-teal-400">Energy</span> & <span className="text-blue-400">Water Efficiency</span>
           <br />
           Engineering Solutions
