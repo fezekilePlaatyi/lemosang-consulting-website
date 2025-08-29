@@ -183,9 +183,8 @@ const Contact = () => {
                 </CardHeader>{" "}
                 <CardContent className="pt-0">
                   {" "}
-                  <p className="text-slate-600">
-                    info@lemosang.com
-                  </p>{" "}
+                  <p className="text-slate-600">info@lemosang.com</p>{" "}
+                  <p className="text-slate-600">www.lemosangconsulting.co.za</p>{" "}
                   <p className="text-slate-600">www.lemosang.com</p>{" "}
                   <p className="text-sm text-slate-500">
                     24-hour response time
